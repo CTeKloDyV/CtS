@@ -11,11 +11,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Configure Git
+        run: |
+          git config --global user.name "GitHub Sync Bot"
+          git config --global user.email "sync@github.com"
+
       - name: Push to GitLab
         env:
           GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
         run: |
-          git config --global user.name "GitHub Sync Bot"
-          git config --global user.email "sync@github.com"
-          git remote add gitlab https://oauth2:${GITLAB_TOKEN}@gitlab.12devs.com/training/internship/2025_tvl_autmn/icheredaylo/cts.git
-          git push gitlab main
+          git remote | grep gitlab || git remote add gitlab https://oauth2:${GITLAB_TOKEN}@gitlab.12devs.com/training/internship/2025_tvl_autmn/icheredaylo/cts.git
+          git push gitlab HEAD:main
