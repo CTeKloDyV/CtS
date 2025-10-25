@@ -28,13 +28,16 @@ This document outlines the work completed on the Safe Query Agent project betwee
 - **Internationalization**: Translated the user interface to Russian.
 - **Translation and Recognition**: Added a feature to translate Russian sentences to English and recognize the intent.
 
-## Future Steps
+## Future Development Plan
 
-- **UI/UX Refinement**: Improve the overall look and feel of the application.
-- **Error Handling**: Enhance the error handling to provide more informative feedback to the user.
-- **Mock Engine Expansion**: Expand the capabilities of the mock SQL generator to support a wider range of queries.
-- **RAG/Lookup Enhancement**: Implement a more robust RAG/lookup mechanism.
-- **Test Coverage**: Add more comprehensive test cases to ensure the stability of the application.
-- **DOM Nesting**: Address the `validateDOMNesting` warning in the browser console.
-- **React 19 Upgrade**: Investigate and potentially upgrade to React 19 once all compatibility issues with Material-UI are resolved.
-- **Backend Stub**: Implement a lightweight backend stub for shared demos.
+### Priority Backlog
+- **Complete end-to-end mock interaction flow**: Finalize agentic follow-up UX so missing-parameter prompts, quick-options and user answers update candidate SQL and logs without page reload.
+- **Robust parameter validation**: Expand validation rules for dates, time zones, units, identifiers, email normalization and enum resolution from lookups.
+- **Expand mock dataset and test-cases**: Add full schema.json coverage, 50+ realistic lookup rows, and extend test-cases to cover edge cases (multi-lingual inputs, ambiguous intents, blacklist triggers).
+- **Sanitizer hardening and blacklist enforcement**: Strengthen sqlSanitizer to detect forbidden tokens, suspicious concatenations, and blacklisted table/column references; enforce sanitized SQL view and block unsafe copy actions.
+
+### Technical Improvements
+- **State and concurrency**: Ensure optimistic UI updates and handle concurrent clarification flows; avoid race conditions when multiple follow-ups are pending.
+- **Schema browsing and lineage hints**: Show column types, nullable flags, sample values, and suggested JOIN paths derived from catalog metadata.
+- **Accessibility and UX polish**: Keyboard navigation for chat, panels and quick-options; visible focus states and ARIA labels for major interactive elements.
+- **I18n and NL normalization**: Improve translation pipeline for RU→EN intent normalization and add locale-aware date parsing and time-zone suggestions.

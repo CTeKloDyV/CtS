@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, AppBar, Toolbar, Typography, Container, Tabs, Tab, Drawer, IconButton } from '@mui/material';
+import { Box, AppBar, Toolbar, Typography, Container, Tabs, Tab, Drawer, IconButton, Paper } from '@mui/material';
 import { Menu as MenuIcon } from '@mui/icons-material';
 import ChatWindow from '../components/Chat/ChatWindow';
 import SQLPanel from '../components/SQLPreview/SQLPanel';

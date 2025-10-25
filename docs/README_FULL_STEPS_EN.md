@@ -19,3 +19,6 @@ This document outlines all the steps taken to complete the Safe Query Agent proj
 15. **Implement security features**: Implemented a basic SQL sanitizer to detect and flag forbidden keywords.
 16. **Set up state management**: Set up the Redux store and created slices for session and UI state.
 17. **Refine and test**: Refined the application and performed testing to ensure all components were working correctly.
+18. **UI/UX Refinement**: Implemented a more organized, full-page layout with a collapsible sidebar and tabbed main area, and a new color scheme.
+19. **Internationalization**: Translated the user interface to Russian.
+20. **Translation and Recognition**: Added a feature to translate Russian sentences to English and recognize the intent.
