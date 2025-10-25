@@ -1,0 +1,6 @@
+[
+  { "id": 1, "name": "pending" },
+  { "id": 2, "name": "shipped" },
+  { "id": 3, "name": "delivered" },
+  { "id": 4, "name": "cancelled" }
+]

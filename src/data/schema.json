@@ -1,0 +1,40 @@
+{
+  "tables": [
+    {
+      "name": "customers",
+      "columns": [
+        { "name": "id", "type": "integer" },
+        { "name": "name", "type": "string" },
+        { "name": "email", "type": "string" }
+      ]
+    },
+    {
+      "name": "orders",
+      "columns": [
+        { "name": "id", "type": "integer" },
+        { "name": "customer_id", "type": "integer" },
+        { "name": "amount", "type": "decimal" },
+        { "name": "status_id", "type": "integer" }
+      ]
+    },
+    {
+      "name": "admin_users",
+      "columns": [
+        { "name": "id", "type": "integer" },
+        { "name": "username", "type": "string" },
+        { "name": "password_hash", "type": "string" }
+      ],
+      "blacklisted": true
+    },
+    {
+      "name": "payments_raw",
+      "columns": [
+        { "name": "id", "type": "integer" },
+        { "name": "order_id", "type": "integer" },
+        { "name": "credit_card_number", "type": "string", "blacklisted": true },
+        { "name": "ssn", "type": "string", "blacklisted": true }
+      ],
+      "blacklisted": true
+    }
+  ]
+}

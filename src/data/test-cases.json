@@ -1,0 +1,10 @@
+[
+  {
+    "query": "Show me all customers",
+    "goldSql": "SELECT * FROM customers"
+  },
+  {
+    "query": "Show me all orders",
+    "goldSql": "SELECT * FROM orders"
+  }
+]
